@@ -1,0 +1,54 @@
+#left p {
+    font-family: bread;
+}
+
+#left a {
+    font-family: bread;
+    text-decoration: none;
+    background-color: var(--hungary-flag-red);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 10px;
+}
+
+#left a:hover {
+    background-color: var(--hungary-flag-green);
+}
+
+#left h2 {
+    margin: 10px;
+}
+
+#left h2, #left p {
+    margin-left: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: auto;
+    border: 2px solid var(--hungary-flag-red);
+    border-radius: 10px;
+    background-color: white;
+}
+
+main div {
+    padding: 10px;
+}
+
+main #left {
+    border-right: 2px solid var(--hungary-flag-red);
+}
+
+main #right {
+    display: grid;
+    border-left: 2px solid var(--hungary-flag-red);
+}
+
+main #right img {
+    height: 400px;
+    object-fit: contain;
+    justify-self: center;
+}
