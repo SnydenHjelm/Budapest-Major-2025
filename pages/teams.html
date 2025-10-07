@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarLadder Budapest Major</title>
+    <link rel="icon" href="../images/icon.webp">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/teams.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="../images/starladder-logo.png"></a>
+        <h2 class="no-margin">BUDAPEST <span id="red">2025</span></h2>
+    </header>
+    <nav class="top-margin">
+        <a href="../index.html">Home</a>
+        <a id="current" href="teams.html">Teams Attending</a>
+        <a href="Venue and City.html">Venue and City</a>
+        <a href="stage1.html">Stage 1</a>
+        <a href="stage2.html">Stage 2</a>
+        <a href="stage3.html">Stage 3</a>
+        <a href="playoffs.html">Playoffs</a>
+    </nav>
+    <main>
+        <h2>Attending teams</h2>
+        <p>32 teams will battle it out in Budapest for the trophy. Here you can view them all and their rosters
+            for the tournament.
+        </p>
+        <h3>STAGE 3</h3>
+        <div class="stage" id="stage3">
+        </div>
+        <h3>STAGE 2</h3>
+        <div class="stage" id="stage2">
+        </div>
+        <h3>STAGE 1</h3>
+        <div class="stage" id="stage1">
+        </div>
+    </main>
+    <div style="display: none; flex-direction: column; align-items: center;">
+        <input id="teamName" type="text" placeholder="Team name...">
+        <input id="stage" type="number" placeholder="Stage...">
+        <input id="player1" type="text" placeholder="Player 1...">
+        <input id="player1Country" type="text" placeholder="Player 1 from...">
+        <input id="player2" type="text" placeholder="Player 2...">
+        <input id="player2Country" type="text" placeholder="Player 2 from...">
+        <input id="player3" type="text" placeholder="Player 3...">
+        <input id="player3Country" type="text" placeholder="Player 3 from...">
+        <input id="player4" type="text" placeholder="Player 4...">
+        <input id="player4Country" type="text" placeholder="Player 4 from...">
+        <input id="player5" type="text" placeholder="Player 5...">
+        <input id="player5Country" type="text" placeholder="Player 5 from...">
+        <button id="submit">Submit</button>
+    </div>
+    <script src="../scripts/teams.js"></script>
+</body>
+</html>

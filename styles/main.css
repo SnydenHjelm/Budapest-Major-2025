@@ -8,6 +8,11 @@
     src: url(../fonts/Liter-Regular.ttf);
 }
 
+@font-face {
+    font-family: head2;
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
+
 :root {
     --hungary-flag-green: #477050;
     --hungary-flag-red: #CE2939;
@@ -16,6 +21,11 @@
 body {
     background-color: var(--hungary-flag-green);
     box-sizing: border-box;
+}
+
+#current {
+    background-color: var(--hungary-flag-red);
+    color: white;
 }
 
 h2 {
@@ -68,6 +78,10 @@ nav a:hover {
 
 .no-margin {
     margin: 0px;
+}
+
+p {
+    font-family: bread;
 }
 
 #red {
