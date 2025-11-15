@@ -232,7 +232,8 @@ const countries = [
   { name: "Vietnam", flag: "🇻🇳" },
   { name: "Yemen", flag: "🇾🇪" },
   { name: "Zambia", flag: "🇿🇲" },
-  { name: "Zimbabwe", flag: "🇿🇼" }
+  { name: "Zimbabwe", flag: "🇿🇼" },
+  {name: "Taiwan", flag: "🇹🇼"}
 ];
 
 document.querySelector("#submit").addEventListener("click", async () => {
