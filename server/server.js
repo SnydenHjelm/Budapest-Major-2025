@@ -9,10 +9,13 @@ async function handler(req) {
 
     let url = new URL(req.url);
     let dbPath = "../db/teams.json";
+    let gamesDb = "../db/games.json";
 
     if (req.method === "GET") {
         if (url.pathname === "/teams") {
             return new Response(Deno.readTextFileSync(dbPath), {headers: headersOBJ});
+        } else if (url.pathname === "/games") {
+            return new Response(Deno.readTextFileSync(gamesDb), {headers: headersOBJ});
         }
     }
 
@@ -30,6 +33,21 @@ async function handler(req) {
             let db = JSON.parse(Deno.readTextFileSync(dbPath));
             db.push(reqBody);
             Deno.writeTextFileSync(dbPath, JSON.stringify(db));
+
+            return new Response(JSON.stringify("Team added successfully"), {status: 201, headers: headersOBJ});
+        } else if (url.pathname === "/games") {
+            if (req.headers.get("content-type") !== "application/json") {
+                return new Response(null, {status: 406, headers: headersOBJ});
+            }
+
+            let reqBody = await req.json();
+            if (!reqBody.stage || !reqBody.team1 || !reqBody.team2 || !reqBody.score || !reqBody.round || !reqBody.mvp || !reqBody.mvpTeam || !reqBody.mvpCountry || !reqBody.link) {
+                return new Response(JSON.stringify("One or more attributes missing, try again"), {status: 400, headers: headersOBJ});
+            }
+
+            let games = JSON.parse(Deno.readTextFileSync(gamesDb));
+            games.push(reqBody);
+            Deno.writeTextFileSync(gamesDb, JSON.stringify(games));
 
             return new Response(JSON.stringify("Team added successfully"), {status: 201, headers: headersOBJ});
         }
