@@ -8,12 +8,13 @@
 }
 
 .game {
-    background-color: white;
+    background-color: #fff;
     border: 2px solid var(--hungary-flag-red);
     border-radius: 10px;
     margin-top: 10px;
     font-size: 24px;
     display: grid;
+    color: black;
     grid-template-columns: 100px 100px 100px 1fr 200px;
     align-items: center;
     padding: 10px 10px 10px 10px;
@@ -32,21 +33,24 @@
 .game div {
     height: 75px;
     width: 75px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--hungary-flag-green);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     justify-self: center;
 }
 
 .game div img {
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+    height: 90%;
+    width: 90%;
     object-fit: contain;
+    padding: 5px;
+    border-radius: 5px;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .game .mvp {
