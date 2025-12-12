@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playoff matches | StarLadder Budapest Major</title>
+    <link rel="icon" href="../images/icon.webp">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/stages.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="../images/starladder-logo.png"></a>
+        <h2 class="no-margin">BUDAPEST <span id="red">2025</span></h2>
+    </header>
+    <nav class="top-margin">
+        <a href="../index.html">Home</a>
+        <a href="teams.html">Teams Attending</a>
+        <a href="venue-city.html">Venue and City</a>
+        <a href="stage1.html">Stage 1</a>
+        <a href="stage2.html">Stage 2</a>
+        <a href="stage3.html">Stage 3</a>
+        <a id="current" href="playoffs.html">Playoffs</a>
+    </nav>
+    <main>
+        <div id="round-nav">
+            <p id="round1">Quarterfinals</p>
+            <p id="round2">Semifinals</p>
+            <p id="round3">Grand Final</p>
+        </div>
+        <div class="games" id="round1-games"></div>
+        <div class="games" id="round2-games"></div>
+        <div class="games" id="round3-games"></div>
+    </main>
+    <div id="controls">
+        <label>Round</label>
+        <select id="round">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <label>Team 1</label>
+        <select id="team1">
+            <option>Team Spirit</option>
+            <option>Falcons</option>
+            <option>Vitality</option>
+            <option>The MongolZ</option>
+            <option>FURIA</option>
+            <option>MOUZ</option>
+            <option>FaZe</option>
+            <option>NaVi</option>
+        </select>
+        <label>Team 2</label>
+        <select id="team2">
+            <option>Team Spirit</option>
+            <option>Falcons</option>
+            <option>Vitality</option>
+            <option>The MongolZ</option>
+            <option>FURIA</option>
+            <option>MOUZ</option>
+            <option>FaZe</option>
+            <option>NaVi</option>
+        </select>
+        <label>Score</label>
+        <input id="score" placeholder="Score...">
+        <label>MVP</label>
+        <input id="mvp" placeholder="MVP of the Match...">
+        <select id="mvp-team">
+            <option>Team Spirit</option>
+            <option>Falcons</option>
+            <option>Vitality</option>
+            <option>The MongolZ</option>
+            <option>FURIA</option>
+            <option>MOUZ</option>
+            <option>FaZe</option>
+            <option>NaVi</option>
+        </select>
+        <input id="mvp-country" placeholder="MVP of the match country...">
+        <label>Link</label>
+        <input id="link" placeholder="Link to HLTV...">
+        <button id="submit">Submit</button>
+        <p id="status">...</p>
+    </div>
+    <script src="../scripts/playoffs.js"></script>
+</body>
+</html>
